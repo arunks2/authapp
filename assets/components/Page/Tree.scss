@@ -1,0 +1,103 @@
+.Tree {
+  border: #dedede thin solid;
+  width: 100%;
+  .TreeRow {
+    border-bottom: #dedede thin solid;
+    transition: background .3s ease-in;
+    &.Search {
+      padding: 4px;
+      background: #fcfcfc;
+      form, input {
+        width: 100%;
+        background: #fff;
+      }
+      .uk-search-default .uk-search-input {
+        height: 30px;
+      }
+    }
+    .Tree {
+      border-width: 1px 0 0;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  .TreeRow {
+    width: 100%;
+    .RowContainer {
+      display: flex;
+      align-items: center;
+    }
+    &.level1 {
+      .Button {
+        padding-left: 20px;
+      }
+    }
+    &.level2 {
+      .Button {
+        padding-left: 40px;
+      }
+    }
+    &.level3 {
+      .Button {
+        padding-left: 60px;
+      }
+    }
+    &.level4 {
+      .Button {
+        padding-left: 80px;
+      }
+    }
+    &.level5 {
+      .Button {
+        padding-left: 100px;
+      }
+    }
+    &.level6 {
+      .Button {
+        padding-left: 120px;
+      }
+    }
+    &.levelx {
+      .Button {
+        padding-left: 140px;
+      }
+    }
+
+
+    .Button {
+      padding: 6px 6px 6px 10px;
+      width:20px;
+      text-align: right;
+      background: rgba(0,0,0,.02);
+      box-sizing: content-box;
+      span.icon {
+        font-weight: bold;
+        &.nochildren {
+          opacity: 0;
+        }
+      }
+    }
+    .LabelContainer {
+      padding: 8px 16px;
+      flex-grow: 1;
+      &.clickable {
+        cursor: pointer;
+        &:hover {
+          font-weight: bold;
+        }
+      }
+      &.expanded {
+        font-weight: bold;
+      }
+    }
+    .MiddleContainer {
+      flex-grow: 1;
+    }
+    .ActionsContainer {
+      flex-shrink: 1;
+    }
+  }
+}
+
+

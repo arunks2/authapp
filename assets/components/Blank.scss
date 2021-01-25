@@ -1,0 +1,11 @@
+html, body {
+	min-height: 100vh;
+}
+body.Blank {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: linear-gradient(226deg, #171219, #2a1f2e, #000000, #251a2d);
+	opacity: .9;
+}

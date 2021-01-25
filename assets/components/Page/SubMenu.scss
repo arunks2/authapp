@@ -1,0 +1,8 @@
+.SubMenu {
+  padding-bottom: 1em;
+    a.nuxt-link-active {
+      color: $color4;
+      // font-weight: bold;
+      border-bottom-color: $color4;
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "vjerp",
+  "version": "1.0.0",
+  "description": "Frontend for VJ ERP Project",
+  "author": "Cobold Digital LLP",
+  "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "5555",
+      "name": "erp"
+    }
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "startserver": "pm2 start ./node_modules/nuxt/bin/nuxt-start -i max --attach --name erp",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@progress/kendo-theme-default": "^2.55.0",
+    "@progress/kendo-treeview-vue-wrapper": "^2018.2.620",
+    "@progress/kendo-ui": "^2018.2.822",
+    "@riophae/vue-treeselect": "0.0.38",
+    "fuse.js": "^3.4.4",
+    "js-cookie": "^2.2.0",
+    "liquor-tree": "^0.2.32",
+    "moment": "^2.24.0",
+    "node-sass": "^4.9.3",
+    "nuxt": "^1.0.0",
+    "nuxt-validate": "^0.1.2",
+    "sass-loader": "^7.1.0",
+    "uikit": "^3.0.0-rc.12",
+    "v-calendar": "^0.9.7",
+    "v-dropdown": "^1.0.8",
+    "v-selectpage": "^2.0.2",
+    "vee-validate": "^2.2.3",
+    "vue-element-loading": "^1.0.4",
+    "vue-good-table": "^2.13.2",
+    "vue-multiselect": "^2.1.6",
+    "vue-select": "^2.5.1",
+    "vue2-datepicker": "^2.4.3",
+    "vuedraggable": "^2.16.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}

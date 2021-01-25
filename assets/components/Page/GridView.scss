@@ -1,0 +1,28 @@
+.GridView {
+  display: flex;
+  width: 100%;
+  & > * {
+    flex-grow: 1;
+    max-width: 33.33%;
+    border: #dedede solid;
+    border-width: 1px 1px 1px 0;
+    &:first-child {
+      border-width: 1px 1px 1px 1px !important;
+    }
+    &:last-child {
+      border-width: 1px 1px 1px 0;
+    }
+    .GridHeader {
+      padding: 10px;
+      font-weight: bold;
+      border-bottom: #dedede thin solid;
+      background: #fdfdfd;
+    }
+    .Content {
+      padding: 10px;
+      &.NoPadding {
+        padding: 0;
+      }
+    }
+  }
+}

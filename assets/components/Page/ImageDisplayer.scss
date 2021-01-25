@@ -1,0 +1,40 @@
+.ImageDisplayer {
+  padding: 1em;
+  .Images {
+    .Image {
+      width: 31%;
+      margin:0 2% 0 0;
+      display: inline-block;
+      position: relative;
+
+      a.Remove {
+        opacity:0;
+        transition: all .2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        position: absolute;
+        top: -5px; right:-5px;
+        font-size: 1.3em;
+        color: $white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $color4;
+        &:hover {
+          background: $color2;
+        }
+      }
+
+      &:hover {
+        a.Remove {
+          opacity: 1;
+        }
+      }
+    }
+    img {
+      max-width: 100%; height: auto;
+    }
+  }
+}

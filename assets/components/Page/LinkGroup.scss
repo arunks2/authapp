@@ -1,0 +1,15 @@
+.LinkGroup {
+  a.Link {
+    margin-right: 1em;
+    span.icon {
+      margin-right: .3em;
+    }
+  }
+  &.Right {
+    text-align: right;
+    a.Link {
+      margin-right:auto;
+      margin-left: 1em;
+    }
+  }
+}

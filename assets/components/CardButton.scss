@@ -1,0 +1,21 @@
+a.CardButton {
+  display: inline-block;
+  padding: 1.5em 3em 2em;
+  text-align: center;
+  border: #dedede thin solid;
+  border-radius: 4px;
+  margin: 1em 1em 1em 0;
+  &:hover {
+    border-color: $color4;
+  }
+
+  .Image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+  }
+  .Text {
+    display: block;
+    font-weight: bold;
+  }
+}

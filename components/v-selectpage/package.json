@@ -1,0 +1,81 @@
+{
+  "_from": "v-selectpage",
+  "_id": "v-selectpage@2.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-8dAKJjEDc1k3aj6fYF8vDjDqgJrneeQ3CDHe5ux1ZOrRMko212GG4sKd5BvFpvS2p4nKgk3Gn9o7dX6esUMzzA==",
+  "_location": "/v-selectpage",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "v-selectpage",
+    "name": "v-selectpage",
+    "escapedName": "v-selectpage",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/v-selectpage/-/v-selectpage-2.0.2.tgz",
+  "_shasum": "f96dfba050d57cc958b674030d5185f4d96c9a15",
+  "_spec": "v-selectpage",
+  "_where": "/Applications/XAMPP/xamppfiles/htdocs/vjerp",
+  "author": {
+    "name": "TerryZ",
+    "email": "terry5@foxmail.com"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "bundleDependencies": false,
+  "dependencies": {
+    "v-dropdown": "^1.0.7",
+    "vue": "^2.5.11"
+  },
+  "deprecated": false,
+  "description": "A powerful selector for Vue2, list or table view of pagination, use tags for multiple selection, i18n and server side resources supports",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  },
+  "keywords": [
+    "front-end",
+    "javascript",
+    "web",
+    "vue",
+    "vuejs",
+    "vue2",
+    "webpack",
+    "selector",
+    "tableview",
+    "i18n",
+    "server-side",
+    "pagination",
+    "tags",
+    "multiple"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "name": "v-selectpage",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot"
+  },
+  "version": "2.0.2"
+}

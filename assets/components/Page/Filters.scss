@@ -1,0 +1,27 @@
+.Filters {
+  border-left: #f2f2f2 thin solid;
+  font-size: 14px;
+  .FiltersHeading  {
+    padding: 0 1em;
+    margin-bottom: 1em;
+    color:$color4;
+    text-transform:uppercase;
+    letter-spacing: .03em;
+    font-weight: bold;
+  }
+
+  .Filter,.FilterAction{
+    padding: 1em;
+    border-top: #f2f2f2 thin solid;
+    &:hover {
+      background: #f9f9f9;
+    }
+    .Heading {
+      margin-bottom: 1em;
+      color:$color1;
+      text-transform:uppercase;
+      letter-spacing: .03em;
+      font-weight: bold;
+    }
+  }
+}

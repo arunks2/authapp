@@ -1,0 +1,73 @@
+@import 'palette.scss';
+// 1. Your custom variables and variable overwrites.
+$global-color:#222;
+$global-primary-background: darken($color4, 10%);
+$global-font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$base-margin-vertical: 0;
+$table-hover-row-background: rgba($color4, .1);
+$table-header-cell-font-weight: 600;
+$table-header-cell-color: $color5;
+$base-h1-font-size-m: 2em;
+$base-h2-font-size-m: 1.6em;
+$offcanvas-bar-background: #fff;
+$offcanvas-bar-color-mode: dark;
+
+// 2. Import default variables and available mixins.
+@import "~/node_modules/uikit/src/scss/variables-theme.scss";
+
+$global-color:#222;
+
+@import "~/node_modules/uikit/src/scss/mixins-theme.scss";
+
+@mixin hook-button-primary() {
+  font-weight: bold;
+}
+
+// 4. Import UIkit.
+@import "~/node_modules/uikit/src/scss/uikit-theme.scss";
+
+.uk-offcanvas-bar.large {
+  width: 800px;
+  box-shadow: -5px 0 10px rgba(0,0,0,.1);
+  background: url('~/assets/img/bg2.jpg') bottom center no-repeat #fff;
+}
+.uk-offcanvas-overlay::before {
+  background: rgba($color5, .5);
+}
+.uk-offcanvas-close {
+  top: 0; right: 0;
+}
+.uk-notification-message {
+  font-size: 14px;
+  font-weight: 500;
+  &.uk-notification-message-success {
+    color:#fff;
+    background:#009900;
+    .uk-close {
+      color:#fff;
+      &:hover {
+        color:#00ff00;
+      }
+    }
+  }
+  &.uk-notification-message-warning {
+    color:#fff;
+    background:#e46b15;
+    .uk-close {
+      color:#fff;
+      &:hover {
+        color:#009999;
+      }
+    }
+  }
+  &.uk-notification-message-error {
+    color:#fff;
+    background:#990000;
+    .uk-close {
+      color:#fff;
+      &:hover {
+        color:#ff0000;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.Header {
+  position: fixed;
+  top: 0; left: 220px; right: 0; height: 50px; background: $grey;
+  z-index:50;
+  display: flex;
+  transition: all .3s ease-out;
+  padding: 0 1em;
+  align-items: center;
+  .Left {
+    flex-grow: 1;
+    font-size: 14px;
+    form.uk-search {
+      color: $color5;
+      width: 100%;
+      input {
+        border: none;
+        &:focus {
+          color: $color5; font-weight: bold;
+        }
+      }
+      .uk-search-icon {
+        color: $color1;
+      }
+    }
+  }
+  .Right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    a {
+      color: $color5;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      margin-left: 1em;
+      padding-left: 1em;
+      border-left: #dedede thin solid;
+      span {
+        margin: 0 .3em;
+      }
+      &:hover {
+        color: $color4;
+      }
+    }
+    .uk-dropdown {
+      padding: 10px;
+      text-align: left;
+      min-width:100px;
+      a {
+        padding: .5em 0; border: none;
+      }
+    }
+  }
+}
+

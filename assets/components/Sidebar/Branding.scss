@@ -1,0 +1,23 @@
+.Branding {
+  // margin-bottom: 1em;
+  // border-bottom: rgba($white, .3) thin dashed;
+  // transition: all .3s ease-out;
+  min-width: 204px;
+  .Name {
+      color: $white;
+      font-size: 1.4em;
+      line-height: 1.2em;
+      // transition: all .3s ease-out;
+      height: auto;
+      img {
+        max-width: 100%;
+        padding: .5em 0 1em;
+        transition: all .3s ease-out;
+      }
+  }
+  .Sub {
+    font-size: 1em;
+    color: $color4;
+    font-weight: bold;
+  }
+}

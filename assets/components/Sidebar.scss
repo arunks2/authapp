@@ -1,0 +1,64 @@
+.Sidebar {
+  width:220px;
+  position: fixed;
+  top: 0; bottom: 0;
+  background: $color1;
+  background: linear-gradient(226deg, #171219, #2a1f2e, #000000, #251a2d);
+  background-size: 800% 800%;
+
+  -webkit-animation: SidebarAnimation 48s ease infinite;
+  -moz-animation: SidebarAnimation 48s ease infinite;
+  animation: SidebarAnimation 48s ease infinite;
+  padding: .5em;
+  overflow-x: hidden;
+  transition: all .3s ease-out;
+  .SmallNavButton {
+    display: block;
+    color: $white;
+    position: fixed;
+    bottom: 0; left: 0;
+    transition: all .3s ease-out;
+    width: 220px;
+    text-align: center;
+    padding: .5em 0;
+    background: rgba($color1, .4);
+    &:hover {
+      background: $color4;
+    }
+  }
+}
+.Container.SmallNav {
+    .Sidebar {
+      width:52px;
+      .SmallNavButton { width: 52px; }
+      .Branding { opacity: 0; height:0; overflow:hidden; img { opacity:0; width: 0%; padding:0; } }
+      .Navigation {
+        span.text { opacity: 0; }
+          ul {
+            display: none !important;
+          }
+      }
+    }
+    .Main {
+      padding-left: 52px;
+    }
+    .Header {
+      left: 52px;
+    }
+}
+
+@-webkit-keyframes SidebarAnimation {
+    0%{background-position:91% 0%}
+    50%{background-position:10% 100%}
+    100%{background-position:91% 0%}
+}
+@-moz-keyframes SidebarAnimation {
+    0%{background-position:91% 0%}
+    50%{background-position:10% 100%}
+    100%{background-position:91% 0%}
+}
+@keyframes SidebarAnimation {
+    0%{background-position:91% 0%}
+    50%{background-position:10% 100%}
+    100%{background-position:91% 0%}
+}

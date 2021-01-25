@@ -1,0 +1,339 @@
+$tableBorderColor: rgba(214, 214, 214, 1);
+.AppTableContainer {
+  width: 100%;
+  overflow-x: scroll;
+  &.Heighted {
+    overflow: auto;
+  }
+
+  & * {
+    box-sizing: border-box;
+  }
+
+  .mx-input {
+    height: 29px;
+  }
+
+  .mx-datepicker-range {
+    width: 100%;
+    min-width: 200px;
+  }
+
+  &.FixedHeader {
+    overflow-x: scroll;
+    .FixedHeaderContent {
+      width:100%;
+      z-index: 4;
+    }
+    .AppTableContent {
+      overflow-x: visible;
+      overflow-y: scroll;
+      z-index: 3;
+      height: calc(100% - 69px);
+    }
+  }
+
+  &.NotFixedHeader {
+    height: auto;
+    width: 100%;
+    overflow: scroll;
+    min-height: 600px;
+  }
+
+  th, td {
+    white-space: nowrap;
+    &.Checkboxes {
+      width: 30px;
+    }
+  }
+  &.White {
+    background: #fff;
+    border: #f4f4f4 thin solid;
+    // border-radius: 4px;
+    & thead th:not(.Filter) {
+      border-top: none;
+    }
+    & thead tr th.Filter {
+      &:first-child {
+        border-left: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+table.AppTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #444;
+  border:  rgba($tableBorderColor,.2) thin solid;
+  tr {
+    &.clickable {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  th, td {
+    text-align: left;
+    border-bottom:  rgba($tableBorderColor,.2) thin solid;
+    padding: .4em 1em;
+    border-right: rgba($tableBorderColor, .2) thin solid;
+
+    &.Right {
+      text-align: right;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+  th {
+    color: #666;
+    max-height: 50px;
+    border-bottom: rgba($tableBorderColor, .5) thin solid;
+    padding-top: .6em;
+    padding-bottom: .6em;
+
+    &.Filter {
+      max-height: 35px;
+      background: #fcfcfc; /* Old browsers */
+    }
+
+    &:not(.Filter) {
+      border-top: #f9f9f9 thin solid;
+    }
+
+    &.Sortable {
+      padding-right: 30px;
+      position: relative;
+      i.none {
+        display: block;
+        opacity: .3;
+      }
+      a.Asc {
+        color: #006600;
+        i.none, i.desc {display: none;}
+        i.asc {display: block;}
+      }
+      a.Desc {
+        i.none, i.asc {display: none;}
+        i.desc {display: block;}
+        color: #660000;
+      }
+    }
+    a {
+      color: #666;
+      text-decoration: none;
+      display: block;
+      i {
+        position: absolute;
+        right: 7px;
+        top:50%;
+        display: none;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  tr:nth-child(even) {
+    background: rgba($tableBorderColor,.05);
+  }
+
+  td {
+    a {
+      color: $color1;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        color: $color5;
+      }
+    }
+  }
+
+  th.Filter {
+    padding: 0; margin: 0;
+    // background: rgba($tableBorderColor, .1);
+    border-right: rgba($tableBorderColor, .5) thin solid;
+    border-top: rgba($tableBorderColor, .5) thin solid;
+    border-bottom: rgba($tableBorderColor, .5) thin solid;
+    &:first-child {
+      border-left: rgba($tableBorderColor, .5) thin solid;
+    }
+
+    &.Active {
+      background: rgba(0,230,0,.1)
+    }
+
+    input {
+      padding: .6em 1.4em;
+      box-sizing: border-box;
+      font-size: 12px;
+      width: 100%;
+      border:none;
+      background: none;
+      box-shadow: none;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    svg {
+      height: auto;
+    }
+    .mx-input-append {
+      background: none;
+    }
+    .mx-calendar-content .cell {
+      padding: 0em;
+      text-align: center;
+    }
+    .mx-panel-date td, .mx-panel-date th {
+      padding: 0;
+      text-align: center;
+    }
+    .mx-calendar {
+      tr {
+        background: none;
+      }
+      td, th {
+        border: none;
+      }
+      .mx-calendar-content .cell.actived {
+        border-radius: 4px;
+      }
+    }
+  }
+
+  tr {
+    transition: all .15s ease;
+  }
+  tbody {
+    tr:hover {
+      background: rgba(lighten($color1, 15%), .05);
+    }
+  }
+
+  .v-select .dropdown-toggle {
+    border: none;
+    font-size: 14px;
+    padding: 0 8px;
+    width: 100%;
+    font-weight: normal;
+    input {
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+  .v-select .dropdown-menu {
+    top: 124%;
+  }
+  .v-select input[type="search"], .v-select input[type="search"]:focus {
+    font-size: 12px;
+    padding:0 8px;
+  }
+  .selected-tag {
+    font-size: 12px;
+    margin: 0;
+  }
+  .v-select .open-indicator:before {
+    border-width: 1px 1px 0 0;
+    margin-top:-5px;
+  }
+  th.Filter .v-select input {
+    width: auto;
+  }
+  .v-select .dropdown-toggle .clear {
+    font-weight: 400;
+    margin-top: -2px;
+  }
+  .v-select span.selected-tag {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width:70%;
+  }
+  .v-select.open.single span.selected-tag {
+    position: relative;
+  }
+}
+
+table.AppTable.FixedHeader {
+  // position: absolute;
+  background: #fff;
+  top: 0; left: 0; right: 0;
+  z-index:2;
+  tbody {
+    tr {
+      border: none;
+      height: 0px;
+      td {
+        padding-top:0;
+        line-height: 0;
+        padding-bottom: 0;
+        border-top: none;
+        border-bottom: none;
+      }
+      td > * {
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+        display: block;
+      }
+      td > input {
+        display: none;
+      }
+    }
+  }
+}
+
+table.AppTable.RemoveHeaders {
+  margin-top: -70px;
+}
+
+thead.zeroHeight {
+  height: 0px;
+  overflow: hidden;
+}
+
+table.AppTable {
+  div.v-selectpage {
+    font-family: inherit;
+    font-weight: normal;
+  }
+  div.v-selectpage div.sp-input-container div.sp-input {
+      background-color: transparent;
+      cursor: pointer;
+      color: #333;
+      opacity: 1;
+      border: none;
+      font-weight: normal;
+  }
+  .sp-base.sp-input {
+    span:first-child:not(:empty) {
+      width: 60%;
+      display: inline-block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  div.v-selectpage div.sp-input-container span {
+    font-size: 12px;
+  }
+  div.v-selectpage div.sp-input-container span.sp-placeholder {
+    color: #797979;
+    font-size: 12px;
+  }
+  div.v-selectpage div.sp-input-container div.sp-inputs {
+      min-height: 29px;
+      font-size: 12px;
+      border: none;
+      background: transparent;
+  }
+  div.v-selectpage div.sp-input-container .sp-base.sp-inputs {
+    height:29px;
+  }
+}
+

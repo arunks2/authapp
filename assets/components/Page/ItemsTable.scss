@@ -1,0 +1,23 @@
+table.ItemsTable {
+  border:#dedede thin solid;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 14px;
+  thead {
+    text-align: left;
+    tr {
+      background: #fafafa;
+    }
+  }
+  td, th {
+    border:#dedede solid;
+    border-width: 1px 1px 0 0;
+    padding: 6px 8px;
+  }
+  tbody {
+    tr:nth-child(even) {
+      background: #fdfdfd;
+    }
+  }
+}

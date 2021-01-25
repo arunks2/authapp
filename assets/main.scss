@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import 'palette.scss';
+@import 'components/Base.scss';
+@import 'components/Sidebar.scss';
+@import 'components/Sidebar/Branding.scss';
+@import 'components/Sidebar/Navigation.scss';
+@import 'components/Header';
+@import 'components/Header/Breadcrumbs';
+@import 'components/Page/Page.scss';
+@import 'components/Page/ContentHeader';
+@import 'components/Page/SubMenu';
+@import 'components/Page/GoodTable';
+@import 'components/Page/Filters';
+@import 'components/Page/Misc';
+@import 'components/Page/List';
+@import 'components/Page/Modal';
+@import 'components/Page/Form';
+@import 'components/Page/LinkGroup';
+@import 'components/Page/Sink';
+@import 'components/Timeline';
+@import 'components/Page/ImageDisplayer';
+@import 'components/Page/Widget';
+@import 'components/Page/Table';
+@import 'components/Page/Panel';
+@import 'components/Page/Tree';
+@import 'components/Page/DropdownMenu';
+@import 'components/Page/GridView';
+@import 'components/Page/ItemsTable';
+@import 'components/CardButton';
+@import 'components/ItemCard';
+@import 'components/Buttons';
+@import 'components/Multiselect';
+@import 'components/Blank.scss';
+@import 'components/CenterContainer';
+@import 'components/Page/PurchaseOrder';
+body {
+  font-size: 14px;
+}
+.Main {
+  padding-left: 220px;
+  transition: all .3s ease-out;
+  padding-top: 50px;
+  .Container {
+    padding: 0 2em;
+  }
+}

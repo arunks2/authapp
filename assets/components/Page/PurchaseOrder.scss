@@ -1,0 +1,23 @@
+.Content {
+  .Info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    span {
+      flex: 0 0 30%;
+    }
+    p {
+      flex: 0 0 30%;
+    }
+  }
+  .From {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .BottomText {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+}

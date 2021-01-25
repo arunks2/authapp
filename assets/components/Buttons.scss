@@ -1,0 +1,36 @@
+button.Button {
+  padding: 1em .8em;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  border: #dedede thin solid;
+  background: #fff;
+  -webkit-appearance: none;
+  transition: all .2s ease;
+  &:hover {
+    cursor: pointer;
+    border-color: #000;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.FixedWidth {
+    width: 120px;
+  }
+  &.Action {}
+  &.Success {
+    color: #009900;
+    border-color: #009900;
+    background: #f9fdf9;
+  }
+}
+.uk-button-primary:disabled {
+  background-color: #999;
+  color: #fff;
+}
+
+.GroupButtons {
+  .uk-button {
+    margin-right: 10px;
+  }
+}

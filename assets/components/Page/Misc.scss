@@ -1,0 +1,84 @@
+span.info {
+  font-size: 1em;
+  color: #444;
+  // font-style: italic;
+}
+
+.Box {
+  border: #dedede thin solid;
+  padding: 1em;
+  &.LimitedHeight {
+    height: 400px;
+    overflow: auto;
+  }
+}
+
+p.info {
+  font-size: 1em;
+  color: #444;
+  font-style: italic;
+}
+
+span.green {
+  color: green;
+}
+span.red {
+  color: red;
+}
+span.loading {
+  color: $color2;
+}
+
+.uk-grid {
+  hr {
+    padding-left: 15px;
+  }
+}
+
+h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: $color5;
+  margin-top: 6px;
+}
+
+.uk-description-list > dt {
+  font-size: 1em;
+}
+
+span.loading:before, .rotate-scale-up {
+  display: inline-block;
+  -webkit-animation: rotate-scale-up 0.65s linear infinite reverse;
+          animation: rotate-scale-up 0.65s linear infinite reverse;
+}
+
+@-webkit-keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+@keyframes rotate-scale-up {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

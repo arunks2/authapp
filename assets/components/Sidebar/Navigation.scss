@@ -1,0 +1,119 @@
+ul.Navigation {
+  list-style:none;
+  padding: 0 0 40px;
+  margin: 0;
+  width: 100%;
+  min-width:204px;
+  & > li {
+    transition: all .21s ease-out;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: rgba($white, .1) thin solid;
+
+    &.Heading {
+      span {
+        color: $color2;
+        text-transform:uppercase;
+        font-size: .8em;
+        letter-spacing: .1em;
+        font-weight: bold;
+      }
+      &:not(:first-of-type) {
+        margin-top: 16px;
+      }
+    }
+
+    .Links {
+      display: flex;
+      &:hover {
+        a.AddButton {
+          opacity: 1;
+        }
+      }
+    }
+    a.Link {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+    a.AddButton {
+      opacity: 0;
+      transition: all .14s ease-in;
+    }
+
+    a {
+      color: $white;
+      display: block;
+      padding: .5em;
+      font-weight: 600;
+      span {display: block;}
+      span.text {
+        transition: all .3s ease-out;
+        flex-grow: 1;
+      }
+      &:hover, &:focus {
+        text-decoration: none;
+        color: $color4;
+        span.icon {
+          color: $color4;
+        }
+      }
+      &:after {
+        justify-self: flex-end;
+        background-position: 100% 50% !important;
+      }
+      span.icon {
+        transition: all .12s ease-in-out;
+        opacity: 1;
+        color: $white;
+        font-size: 20px;
+        margin-right: .5em;
+      }
+      &.active, &.nuxt-link-active {
+        color: $color4 !important;
+        font-weight: 600;
+        opacity: 1;
+        span.icon {
+          color: $color4;
+          transform: scale(1.2);
+        }
+        span.text {
+          color: $color4;
+        }
+        // border-right: $color4 10px inset;
+      }
+    }
+    &.uk-open {
+      & > a {
+        text-decoration: none;
+        color: $color4;
+        span.icon {
+          color: $color4;
+        }
+      }
+    }
+
+    ul.uk-nav-sub, ul {
+      list-style: none;
+      padding: 0px 0 15px 30px;
+      li {
+        a {
+          color: $white;
+          &:hover, &:focus {
+            color: $color4;
+          }
+        }
+      }
+    }
+    li.uk-nav-header {
+      color: $color2;
+      font-weight: bold;
+      font-size: 12px;
+      padding-top: 8px;
+      border-top: rgba($white, .1) thin solid;
+      margin-top: 8px;
+      padding-left: 0px;
+    }
+
+  }
+}

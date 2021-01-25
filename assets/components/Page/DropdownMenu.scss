@@ -1,0 +1,13 @@
+.uk-dropdown.DropdownMenu {
+  padding: .7em 1em;
+  .uk-nav-header {
+    margin-top: 5px;
+  }
+  a.Highlight {
+    font-weight: bold;
+    color: $color5;
+    &:hover {
+      color: $color4;
+    }
+  }
+}
